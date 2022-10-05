@@ -1,0 +1,26 @@
+// utilizando a recursividade há a possibilidade de criar uma função para calcular o fatorial de um numero
+
+
+#include <iostream>
+
+using namespace std;
+
+int inst = 0;
+
+int fatorial(int n){
+    cout << endl << " instância " << ++inst << " quando n = " << n;
+    if (n < 2)
+        return 1;
+    else
+        return n * fatorial(n-1);
+}
+
+int main(int argc, char**argv){
+    int n, ft;
+    cout << "cálculo do Fatorial ..." << endl;
+    cout << " Digite o valor de n -> ";
+    cin >> n;
+    ft = fatorial(n);
+    cout << endl << " o fatorial de " << n << " é -> " << ft << endl;
+    return 0;
+}
